@@ -1,0 +1,47 @@
+<table class="table align-middle mb-0 bg-white">
+    <thead class="bg-light">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Login</th>
+            <th scope="col">Avatar</th>
+            <th scope="col">Url</th>
+            <th scope="col">Html Url</th>
+            <th scope="col">followers_url</th>
+            <th scope="col">following_url</th>
+            <th scope="col">gists_url</th>
+            <th scope="col">starred_url</th>
+            <th scope="col">subscriptions_url</th>
+            <th scope="col">organizations_url</th>
+            <th scope="col">repos_url</th>
+            <th scope="col">events_url</th>
+            <th scope="col">received_events_url</th>
+            <th scope="col">type</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let item of users">
+        <tr>
+            <th scope="row">1</th>
+            <td>
+                <p class="fw-normal mb-1">{{item.login}}</p>
+            </td>
+            <td>
+                <div class="d-flex align-items-center">
+                    <img src={{item.avatar_url}} alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+                </div>
+            </td>
+            <td>{{item.url}}</td>
+            <td> {{item.html_url}}</td>
+            <td>{{item.followers_url}}</td>
+            <td>{{item.following_url}}</td>
+            <td>{{item.gists_url}}</td>
+            <td>{{item.starred_url}}</td>
+            <td>{{item.subscriptions_url}}</td>
+            <td>{{item.organizations_url}}</td>
+            <td>{{item.repos_url}}</td>
+            <td>{{item.events_url}}</td>
+            <td>{{item.received_events_url}}</td>
+            <td>{{item.type}}</td>
+        </tr>
+
+    </tbody>
+</table>
